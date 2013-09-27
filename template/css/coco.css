@@ -35,6 +35,10 @@ p.date {
   font-size: 80%;
 }
 
+p.average {
+  font-weight: bold;
+}
+
 table {
   width: 100%;
 }

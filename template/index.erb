@@ -38,7 +38,7 @@
     </table>
 
 	<p class="average">
-		Average <%= @covered.reduce(:percentage) / (@uncovered.count + @covered.count) * 100.0 %>% across <%= @uncovered.count + @covered.count %> files
+		<%= "Average #{@average_coverage}% across #{@total_files} files" %>
 	</p>
     
     <p class="license">
