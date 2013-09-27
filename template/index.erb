@@ -36,6 +36,10 @@
       <% end%>
       
     </table>
+
+	<p class="average">
+		Average <%= @covered.reduce(:percentage) / (@uncovered.count + @covered.count) * 100.0 %>% across <%= @uncovered.count + @covered.count %> files
+	</p>
     
     <p class="license">
     Coco, code coverage for ruby.<br/>
