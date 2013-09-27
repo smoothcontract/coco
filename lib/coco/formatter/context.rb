@@ -21,10 +21,11 @@ module Coco
   class IndexContext
   
     # @todo doc, inheritance (with Context)
-		def initialize title, covered, uncovered
+		def initialize title, covered, uncovered, stats
 			@title = title
       @covered = covered
       @uncovered = uncovered
+      @stats = stats
 		end
 		
 		def get_binding

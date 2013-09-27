@@ -18,7 +18,7 @@ module Coco
     end
     
     def format
-      @context = IndexContext.new Helpers.index_title, @lines, @uncovered
+      @context = IndexContext.new Helpers.index_title, @lines, @uncovered, @stats
       @template.result(@context.get_binding)
     end
     
@@ -34,9 +34,10 @@ module Coco
     end
 
     def build_stats_for_context
-      @total_files = @uncovered.count + @lines.count  
-      @total_coverage = @lines.inject(0) {|total, line| total + line.first }
-      @average_coverage = @total_files > 0 ? @total_coverage / @total_files : 0
+      total_files = @uncovered.count + @lines.count  
+      total_coverage = @lines.inject(0) {|total, line| total + line.first }
+      average_coverage = total_files > 0 ? (total_coverage * 2 / total_files) / 2.0 : 0
+      @stats = {:total_files => total_files, :average_coverage => average_coverage}
     end
   end
 
