@@ -1,11 +1,16 @@
 @charset "UTF-8";
 @import url("reset-min.css");
 @import url("base-min.css");
-@import url("font-min.css")
+@import url("fonts-min.css")
 
 html {
   background-color: #fff;
   color: #222;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica;
+  font-weight: lighter;
 }
 
 h2 {
@@ -63,9 +68,13 @@ tr.miss {
    background-color: #E6567A;
 }
 
-td.yellow, td.orange, td.pink, td.red, td.black {
+td.green, td.yellow, td.orange, td.pink, td.red, td.black {
   width: 45px;
   color: #fff;
+}
+
+td.green {
+  background-color: #10d010;
 }
 
 td.yellow {

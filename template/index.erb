@@ -23,8 +23,10 @@
       
       <% @covered.each do |percentage, filename, href| %>
         <tr>
-      <% if percentage > 80 %>
-        <td class ="yellow">
+      <% if percentage > 99 %>
+        <td class="green">
+      <% elsif percentage > 80 %>
+        <td class="yellow">
       <% elsif percentage > 70 %>
         <td class="orange">
       <% elsif percentage > 50 %>
